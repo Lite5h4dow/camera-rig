@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  compile_raspberry1:
+  compile_raspberry0:
     build: .
     command: cargo build --target=arm-unknown-linux-gnueabihf --release
     volumes:
