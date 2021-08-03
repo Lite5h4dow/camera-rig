@@ -8,5 +8,6 @@ edition = "2018"
 
 [dependencies]
 sysfs_gpio = "0.5"
-stick = "0.12.1"
+# stick = "0.12.1"
+stick = {git="https://github.com/libcala/stick"}
 pasts = "0.8"

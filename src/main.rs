@@ -2,6 +2,9 @@ use pasts::Loop;
 use std::task::Poll::{self, Pending, Ready};
 use stick::{Controller, Event, Listener};
 
+mod axis;
+use axis::Axis;
+
 type Exit = usize;
 
 struct State {
