@@ -54,6 +54,10 @@ impl State {
 }
 
 async fn event_loop() {
+    let mut x_axis:Axis = Axis::build_axis(4, 17, "XAxis".to_string());
+    let mut y_axis:Axis = Axis::build_axis(23, 18, "YAxis".to_string());
+    let mut z_axis:Axis = Axis::build_axis(25,24, "ZAxis".to_string());
+
     let mut state = State {
         listener: Listener::default(),
         controllers: Vec::new(),

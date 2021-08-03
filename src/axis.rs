@@ -1,7 +1,8 @@
-use sysfs_gpio::{Direction, Pin};
-use std::{thread::{sleep, Builder}, time::{Instant, Duration}};
+use sysfs_gpio::Pin;
+use std::{thread::sleep, time:: Duration};
 
 pub struct Axis{
+  name: String,
   dir_pin: Pin,
   step_pin: Pin,
   step_delay: u16,
@@ -10,8 +11,9 @@ pub struct Axis{
 }
 
 impl Axis{
-  fn build_axis(step_pin:u64, dir_pin:u64, name: String ) -> Axis{
+  pub fn build_axis(step_pin:u64, dir_pin:u64, name: String ) -> Axis{
     Axis{
+      name: name,
       dir_pin: Pin::new(dir_pin),
       step_pin: Pin::new(step_pin),
       step_delay: 650,
